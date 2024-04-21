@@ -1,0 +1,86 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Asegura que la altura mínima sea la altura de la ventana gráfica */  
+}
+
+.login-box {
+  width: 100%;
+  max-width: 340px; /* Ajustado para considerar el padding y los bordes */
+  margin: auto;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box; /* Asegura que padding y border formen parte del width y height */
+}
+
+.login-title {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.login-form .input-container {
+  margin-bottom: 10px; /* Espacio antes del botón */
+}
+
+.login-form input {
+  width: 100%; /* Asegura que los inputs sean del mismo ancho que el botón */
+  padding: 15px;
+  margin-bottom: 10px; /* Espacio entre los inputs */
+  border: 1px solid var(--add-ons-color4);
+  border-radius: 10px;
+  box-sizing: border-box; /* Asegura que padding y border formen parte del width y height */
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%; /* Asegura que el botón sea del mismo ancho que los inputs */
+  padding: 15px; /* Mismo padding vertical que los inputs */
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-sizing: border-box; /* Asegura que padding y border formen parte del width y height */
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: var(--featured-color);
+}
+
+.login-links {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.login-links a {
+  color: var(--add-ons-color2);
+  text-decoration: none;
+  display: block; /* Esto hará que cada enlace aparezca en su propia línea */
+  margin: 10px 0; /* Añade un poco de margen alrededor de los enlaces para separarlos */
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+a.olvide-contraseña {
+  text-align: center;
+  padding-top: 0;
+  margin: 3px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+a.registro {
+  text-align: center;
+  padding-top: 0;
+  margin: 3px;
+  font-size: 12px;
+  color: var(--primary-color);
+}

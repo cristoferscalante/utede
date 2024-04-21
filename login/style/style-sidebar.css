@@ -1,0 +1,62 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2; /* Asegura que el sidebar siempre esté por encima */
+  padding: 10px;  
+}
+
+.logo {
+  width: 100%; /* Hace que el contenedor del logo ocupe todo el ancho */
+  display: flex;
+  justify-content: center; /* Centra el logo horizontalmente */
+  margin-top: 20px;
+}
+
+.logo-image {
+  width: 180px; /* Tamaño del logo */
+  height: auto; /* Mantiene la proporción del logo */
+}
+
+.main-menu {
+  flex-grow: 1; /* Permite que este bloque crezca para llenar el espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el menú principal verticalmente */
+  width: 100%; /* Hace que el menú ocupe todo el ancho */  
+}
+
+.logout-menu {
+  width: 100%; /* Hace que el menú de cierre ocupe todo el ancho */
+  display: flex;
+  justify-content: center; /* Centra el menú de cierre horizontalmente */
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  width: 100%  ; /* Restamos el padding total horizontal del sidebar */
+  margin: 10px 0; /* Añade un margen uniforme alrededor de los enlaces */
+}
+
+.sidebar a:hover{
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+.sidebar a.active {
+  background-color: var(--featured-color);
+  color: var(--tertiary-color);
+}	

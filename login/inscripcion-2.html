@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./style/style-home.css">
+<link rel="stylesheet" href="./style/style-sidebar.css">
+<link rel="stylesheet" href="./style/style-header.css">
+<link rel="stylesheet" href="./style/style-inscripcion-2.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo">
+        <img src="../resources/images/Logo-utede.png" alt="Logo" class="logo-image">
+    </div>
+    <div class="menu main-menu">
+        <a href="#"><i class="fa fa-tachometer-alt"></i> Panel</a>
+        <a href="#"><i class="fa fa-user-circle"></i> Cuenta</a>
+        <a href="http://127.0.0.1:3000/program/index-program.html"><i class="fa fa-graduation-cap"></i> Programas</a>
+        <a href="#"><i class="fa fa-calendar-alt"></i> Calendario</a>
+        <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+    </div>
+    <div class="menu logout-menu">
+        <a href="http://127.0.0.1:3000/login/index-login.html" class="active"><i class="fa fa-sign-out-alt"></i> Iniciar sección</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    
+    <div class="form-container">
+      <div class="form-box">
+        <h1>¡BIENVENIDO!</h1>
+        <p class="signup-subtitle">Transforma tu futuro en la Utedé, inscríbete hoy y empieza a crear el mañana!</p>
+        <p class="signup-instruction">Por favor llena estos datos para conocerte.</p>
+    
+        <form action="/submit-form" method="post" class="registration-form">
+          <label for="document-type">Tipo de documento</label>
+          <select id="document-type" name="document-type">
+            <option value="id">Cédula de Ciudadanía</option>
+            <option value="passport">Pasaporte</option>
+            <!-- Otros tipos de documentos -->
+          </select>
+          
+          <label for="number">Número</label>
+          <input type="text" id="number" name="number" placeholder="Número" required>
+          
+          <label for="birthdate">Fecha de nacimiento</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+          
+          <label for="gender">Sexo</label>
+          <select id="gender" name="gender">
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+            <!-- Otras opciones -->
+          </select>
+          
+          <div class="button-container">
+            <a href="http://127.0.0.1:3000/login/inscripcion-1.html" class="back-button">Regresar</a>
+            <a href="http://127.0.0.1:3000/login/inscripcion-3.html" class="back-button">Siguiente</a>            
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

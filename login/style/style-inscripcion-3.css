@@ -1,0 +1,94 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 20px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;  
+  box-sizing: border-box;
+}
+
+.password-form .input-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.password-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid var(--add-ons-color4);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle i {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección para que los botones se apilen */
+  gap: 10px; /* Mantiene un espacio entre los botones */
+  margin-top: 20px;
+}
+
+
+.next-button {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+.back-button {
+  width: 100%; /* Opcional: Si también quieres que "Regresar" ocupe todo el ancho */  
+  border: none;
+  border-radius: 10px; /* Asegúrate de que el diseño sea consistente */
+  background-color: transparent; /* Opcional: Puedes darle un color de fondo */
+  color: var(--primary-color);  
+  cursor: pointer; /* Si quieres que se vea como un botón */
+  text-decoration: none;
+  margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+  font-size: 14px; /* Opcional: Ajusta el tamaño de la fuente como prefieras */
+}
+
+.back-button:hover,
+.next-button:hover {
+  filter: brightness(85%);
+}
+
+p.signup-subtitle{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+p.signup-instruction{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 12px;
+  padding-bottom: 20px;;
+}

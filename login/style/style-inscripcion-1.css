@@ -1,0 +1,86 @@
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 20px;
+  
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box; /* Importante para que padding no aumente el ancho */
+}
+
+.signup-title {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.signup-form .input-container {
+  margin-bottom: 20px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px; /* Espacio entre los campos de entrada */
+  border: 1px solid var(--add-ons-color4);
+  border-radius: 10px;
+  box-sizing: border-box; /* Importante para que padding no aumente el ancho */
+  font-size: 14px;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Separación del botón "Regresar" */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-button:hover {
+  background-color: var(--featured-color);
+}
+
+.back-button {
+  display: block; /* Hace que "Regresar" se muestre como un bloque en su propia línea */
+  color: var(--primary-color);
+  text-decoration: none;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-top: 1px; /* Espacio por encima del enlace "Regresar" */
+  font-size: 12px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Agregando estilos para el texto de instrucción */
+.signup-instruction {
+  margin-top: 10px;
+  margin-bottom: 20px; /* Más espacio antes de los campos de entrada */
+  text-align: left; /* Alinea a la izquierda el texto de instrucción */
+}
+
+p.signup-subtitle{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+p.signup-instruction{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 12px;
+}

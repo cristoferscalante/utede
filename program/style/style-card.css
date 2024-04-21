@@ -1,0 +1,82 @@
+.program-image {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto; /* Mantiene la relación de aspecto de la imagen */
+  border-top-left-radius: 8px; /* Redondea las esquinas superiores de la imagen */
+  border-top-right-radius: 8px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  justify-content: center; /* Esto centrará los elementos de la cuadrícula en el contenedor */
+  padding: 10px 10px; /* Agrega padding si quieres más espacio alrededor de los elementos del grid */
+  padding-bottom: 40px;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: var(--tertiary-color);
+  /* Elimina la anchura fija para permitir que la tarjeta sea flexible */
+  margin: auto; /* Centra la tarjeta en la columna del grid */
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 24px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: var(--text);
+}
+
+.card-info {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.card-button {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-button:hover {
+  background-color: var(--featured-color)
+}
+
+/**/
+
+.program-utede {
+  margin: 0;  
+  padding-left: 2px;
+  font-size: 1.5rem;
+}
+
+.utede-divider {
+   
+  height: 0.2px; /* Establece la altura de la línea */
+  background-color: var(--text); /* El color de la línea, cámbialo según tu esquema de colores */
+  width:100%;
+  margin-left: 0; /* Alinea la línea horizontal al lado izquierdo */
+  margin-right: auto; /* Esto mantendrá la línea alineada a la izquierda */
+  margin: 3px;
+}

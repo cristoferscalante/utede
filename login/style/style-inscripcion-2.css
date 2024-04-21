@@ -1,0 +1,77 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.form-box h1 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.registration-form label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.registration-form select,
+.registration-form input[type="text"],
+.registration-form input[type="date"] {
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  border: 1px solid var(--add-ons-color4);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registration-form .button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.back-button,
+.next-button {
+  display: block; /* Hace que "Regresar" se muestre como un bloque en su propia línea */
+  color: var(--primary-color);
+  text-decoration: none;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-top: 1px; /* Espacio por encima del enlace "Regresar" */
+  font-size: 12px;
+}
+
+.back-button:hover,
+.next-button:hover {
+  filter: brightness(85%);
+}
+
+/* Es posible que se necesiten estilos adicionales para el ícono del calendario dependiendo de cómo lo implementes. */
+p.signup-subtitle{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+p.signup-instruction{
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 12px;
+  padding-bottom: 20px;;
+}

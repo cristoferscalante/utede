@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Alineación vertical */
+  padding: 20px 20px; /* Agregamos padding horizontal para prevenir que el contenido toque los bordes de la pantalla */
+  box-sizing: border-box; /* Asegura que el padding no se añada al ancho del header */
+  width: 100%; /* Establece el ancho del header al 100% de la pantalla */
+  max-width: 100vw; /* Establece un ancho máximo para prevenir desbordamiento */
+}
+
+.login-area {
+  display: flex;
+  align-items: center; /* Esto centrará el texto con respecto a la imagen verticalmente */
+  white-space: nowrap; /* Evita que el nombre se pase a la siguiente línea */
+  overflow: hidden; /* Evita desbordamiento */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+  max-width: calc(100% - 20px); /* Ajusta el ancho máximo del contenedor para prevenir desbordamiento */
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  color: var(--secondary-color);
+  font-size: 1rem; /* Ajusta esto según prefieras */
+  margin-right: 20px; /* Asegura algo de espacio entre el nombre y el borde de la pantalla */
+}
+h1 {
+  color: var(--primary-color);
+  font-size: 2rem; /* Ajusta esto según prefieras */
+  margin-right: auto; /* Empuja el título hacia la izquierda */
+}
