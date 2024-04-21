@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./style/style-program.css">
+<link rel="stylesheet" href="./style/style-sidebar.css">
+<link rel="stylesheet" href="./style/style-header.css">
+<link rel="stylesheet" href="./style/style-program-enrollment1.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="../resources/images/Logo-utede.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="menu main-menu">
+            <a href="#"><i class="fa fa-tachometer-alt"></i> Panel</a>
+            <a href="#"><i class="fa fa-user-circle"></i> Cuenta</a>
+            <a href="http://127.0.0.1:3000/program/index-program.html" class="active"><i class="fa fa-graduation-cap"></i> Programas</a>
+            <a href="#"><i class="fa fa-calendar-alt"></i> Calendario</a>
+            <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+        </div>
+        <div class="menu logout-menu">
+          <a href="http://127.0.0.1:3000/login/index-login.html"><i class="fa fa-sign-out-alt"></i> Iniciar sección</a>
+      </div>
+    </div>
+
+    <div class="main-content">    
+
+      <div class="registration-form">
+        <h1>¡INSCRÍBETE AL PROGRAMA!</h1>
+        <p>Esta información es clave para identificar si existen beneficios diseñados para ti.</p>
+        <form>
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">Confirmo que he leído y acepto los términos y condiciones marcando la siguiente casilla.</label>
+          </div>
+      
+          <input type="text" id="icfes" name="icfes" placeholder="Código ICFES 11">
+          <input type="text" id="militaryId" name="militaryId" placeholder="Libreta Militar">
+          
+          <label for="previousLevel">Nivel de formación previo</label>
+          <select id="previousLevel" name="previousLevel">
+            <option value="">Seleccionar nivel</option>
+            <!-- Opciones adicionales aquí -->
+          </select>
+      
+          <div class="documents">
+            <p>Por favor adjunta los siguientes documentos.</p>
+            <div class="documents-upload">           
+
+              <div>
+                <label for="upload-cedula" class="custom-file-upload">Copia de cédula
+                  <i class="fa fa-plus-circle add-button"></i>
+                </label>
+                <i class="fa fa-question-circle info-button" onclick="alert('Please upload a scanned copy of your ID. Accepted formats are JPG, PNG, and PDF.')"></i>
+                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+              </div>
+              
+              <div>
+                <label for="upload-libreta" class="custom-file-upload">Copia de libreta militar
+                  <i class="fa fa-plus-circle add-button"></i>
+                </label>
+                <i class="fa fa-question-circle info-button" onclick="alert('Please upload a scanned copy of your ID. Accepted formats are JPG, PNG, and PDF.')"></i>
+                <input id="upload-libreta" type="file" class="file-input" style="display:none;"/>
+              </div>
+              
+              <div>
+                <label for="upload-acta" class="custom-file-upload">Copia de acta de grado
+                  <i class="fa fa-plus-circle add-button"></i>
+                </label>
+                <i class="fa fa-question-circle info-button" onclick="alert('Please upload a scanned copy of your ID. Accepted formats are JPG, PNG, and PDF.')"></i>
+                <input id="upload-acta" type="file" class="file-input" style="display:none;"/>
+              </div>
+              
+              <div>
+                <label for="upload-bachiller" class="custom-file-upload">Copia de diploma de bachiller
+                  <i class="fa fa-plus-circle add-button"></i>
+                </label>
+                <i class="fa fa-question-circle info-button" onclick="alert('Please upload a scanned copy of your ID. Accepted formats are JPG, PNG, and PDF.')"></i>
+                <input id="upload-bachiller" type="file" class="file-input" style="display:none;"/>
+              </div>
+
+              <div>
+                <label for="upload-icfes" class="custom-file-upload">Copia de certificado ce ICFES
+                  <i class="fa fa-plus-circle add-button"></i>
+                </label>
+                <i class="fa fa-question-circle info-button" onclick="alert('Please upload a scanned copy of your ID. Accepted formats are JPG, PNG, and PDF.')"></i>
+                <input id="upload-icfes" type="file" class="file-input" style="display:none;"/>
+              </div>
+              
+              
+            </div>
+          </div>           
+                
+          <div class="form-buttons">
+            <button type="button" class="back-button">Regresar</button>
+            <button type="submit" class="next-button">Siguiente</button>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        function showInfoMessage() {
+          var infoBubble = document.getElementById('info-bubble');
+          infoBubble.style.display = 'inline-block';
+          infoBubble.style.opacity = 1;
+          
+          // Wait for 5 seconds, then fade out the bubble
+          setTimeout(function() {
+            infoBubble.style.opacity = 0;
+            // After the transition ends, set display to 'none' again
+            infoBubble.addEventListener('transitionend', function() {
+              infoBubble.style.display = 'none';
+            }, { once: true });
+          }, 5000);
+        }
+      </script>
+  
+  </body>
+</html>

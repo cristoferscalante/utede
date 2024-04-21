@@ -60,3 +60,52 @@
   background-color: var(--featured-color);
   color: var(--tertiary-color);
 }	
+
+.info-button i, label i {
+  margin-right: 5px; /* Espacio entre icono y texto, si fuera necesario */
+}
+
+/* Puedes remover la línea y el fondo del botón si prefieres solo el icono */
+.info-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.25em; /* Ajustar tamaño del icono */
+}
+
+label {
+  background: none;
+  cursor: pointer;
+  font-size: 1.25em; /* Ajustar tamaño del icono */
+}
+
+.info-message {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 100;
+  /* Position the message bubble around the info button */
+  top: 20px; /* Adjust as necessary */
+  left: 20px; /* Adjust as necessary */
+}
+
+.info-button {
+  cursor: pointer;
+}
+
+.info-bubble {
+  display: none;
+  margin-left: 10px;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative; /* Position it relative to its normal position */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for fading in/out */
+}
+

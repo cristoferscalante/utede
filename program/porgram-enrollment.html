@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./style/style-program.css">
+<link rel="stylesheet" href="./style/style-sidebar.css">
+<link rel="stylesheet" href="./style/style-header.css">
+<link rel="stylesheet" href="./style/style-program-enrollment.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="../resources/images/Logo-utede.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="menu main-menu">
+            <a href="#"><i class="fa fa-tachometer-alt"></i> Panel</a>
+            <a href="#"><i class="fa fa-user-circle"></i> Cuenta</a>
+            <a href="http://127.0.0.1:3000/program/index-program.html" class="active"><i class="fa fa-graduation-cap"></i> Programas</a>
+            <a href="#"><i class="fa fa-calendar-alt"></i> Calendario</a>
+            <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+        </div>
+        <div class="menu logout-menu">
+          <a href="http://127.0.0.1:3000/login/index-login.html"><i class="fa fa-sign-out-alt"></i> Iniciar sección</a>
+      </div>
+    </div>
+
+    <div class="main-content">    
+
+      <div class="registration-card">
+        <h1>¡INSCRÍBETE AL PROGRAMA!</h1>
+        <p>Esta información es clave para identificar si existen beneficios diseñados para ti.</p>
+        <form>
+          <label for="departamento">Departamento</label>
+            <select id="departamento" name="departamento">
+              <option value="">Selecciona un departamento</option>
+            </select>
+      
+          <label for="ciudad">Municipio o Ciudad</label>
+            <select id="ciudad" name="ciudad" disabled>
+              <option value="">Selecciona un ciudad</option>
+            </select>   
+                
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección">
+      
+          <div class="buttons">
+            <button type="button" class="back-button">Regresar</button>
+            <button type="submit" class="next-button">Siguiente</button>
+          </div>
+        </form>
+      </div>
+      
+      </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetchDepartamentos();
+    });
+    
+    function fetchDepartamentos() {
+      fetch('https://api-colombia.com/api/v1/Department')
+        .then(response => response.json())
+        .then(departamentos => {
+          const selectDepartamento = document.getElementById('departamento');
+          departamentos.forEach(departamento => {
+            selectDepartamento.appendChild(new Option(departamento.name, departamento.id));
+          });
+        })
+        .catch(error => console.error('Error al obtener departamentos:', error));
+    }
+    
+    document.getElementById('departamento').addEventListener('change', function() {
+      // Limpiar previamente las ciudades
+      const selectCiudad = document.getElementById('ciudad');
+      selectCiudad.innerHTML = '<option value="">Selecciona una ciudad</option>';
+      selectCiudad.disabled = true;
+    
+      if (this.value) {
+        fetchCiudadesPorDepartamento(this.value);
+      }
+    });
+    
+    function fetchCiudadesPorDepartamento(departamentoId) {
+      fetch('https://api-colombia.com/api/v1/City')
+        .then(response => response.json())
+        .then(ciudades => {
+          const selectCiudad = document.getElementById('ciudad');
+          const ciudadesFiltradas = ciudades.filter(ciudad => ciudad.departmentId == departamentoId);
+          ciudadesFiltradas.forEach(ciudad => {
+            selectCiudad.appendChild(new Option(ciudad.name, ciudad.id));
+          });
+          if (ciudadesFiltradas.length > 0) {
+            selectCiudad.disabled = false;
+          }
+        })
+        .catch(error => console.error('Error al obtener ciudades:', error));
+    }  
+    
+  </script>
+  </body>
+</html>

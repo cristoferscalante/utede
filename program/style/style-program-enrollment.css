@@ -1,0 +1,63 @@
+.registration-card {
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--text);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* Ajustar según sea necesario */
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-card h1 {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  text-align: center;
+  margin: -20px -20px 20px -20px; /* Para extender el fondo hasta los bordes */
+  padding: 10px;
+  border-top-left-radius: 8px; /* Para mantener el borde redondeado */
+  border-top-right-radius: 8px;
+}
+
+.registration-card p {
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registration-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select, input[type="text"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--add-ons-color2);
+  border-radius: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button, .next-button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+.next-button {
+  background-color: var(--featured-color);
+  color: var(--tertiary-color);
+}
