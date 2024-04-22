@@ -1,0 +1,64 @@
+.program-header h1,
+.program-header h2 {
+  text-align: center;
+}
+
+.program-header hr {
+  border: 0;
+  height: 2px;  
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.modules-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.module-card {
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.module-card h3 {
+  color: var(--primary-color);
+  font-size: 1.2em;
+}
+
+.module-card p {
+  color: var(--secondary-text-color);
+  font-size: 0.9em;
+}
+
+.module-card p span {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.module-card button {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.module-card button:hover {
+  background-color: var(--featured-color);
+}
+
+
+
+
+
+

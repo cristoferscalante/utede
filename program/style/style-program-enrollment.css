@@ -1,9 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Altura completa de la ventana del navegador */
+}
+
 .registration-card {
   background-color: var(--tertiary-color);
-  border: 1px solid var(--text);
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   padding: 20px;
-  width: 300px; /* Ajustar según sea necesario */
+  width: 350px;
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -14,8 +21,8 @@
   text-align: center;
   margin: -20px -20px 20px -20px; /* Para extender el fondo hasta los bordes */
   padding: 10px;
-  border-top-left-radius: 8px; /* Para mantener el borde redondeado */
-  border-top-right-radius: 8px;
+  border-top-left-radius: 20px; /* Para mantener el borde redondeado */
+  border-top-right-radius: 20px;
 }
 
 .registration-card p {
@@ -34,30 +41,28 @@ label {
 }
 
 select, input[type="text"] {
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 15px;
   border: 1px solid var(--add-ons-color2);
-  border-radius: 4px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
+  border-radius:10px;
 }
 
 .back-button, .next-button {
+  padding: 15px 20px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
-}
-
-.back-button {
-  background-color: var(--secondary-color);
   color: var(--tertiary-color);
+  background-color: var(--primary-color); /* Para el botón de regresar */
+  width: 49%; /* Asegúrate de que ambos botones tengan el mismo ancho */
+  font-size: 16px;
 }
 
 .next-button {
-  background-color: var(--featured-color);
-  color: var(--tertiary-color);
+  background-color: var(--primary-color); /* Para el botón de siguiente */
+}
+
+.back-button:hover, .next-button:hover {
+  opacity: 0.8;
+  background-color: var(--featured-color); /* Ajusta el color de fondo al pasar el cursor */
 }

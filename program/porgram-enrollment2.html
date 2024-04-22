@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./style/style-program.css">
 <link rel="stylesheet" href="./style/style-sidebar.css">
 <link rel="stylesheet" href="./style/style-header.css">
-<link rel="stylesheet" href="./style/style-program-enrollment1.css">
+<link rel="stylesheet" href="./style/style-program-enrollment2.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -37,18 +37,23 @@
         <div class="registration-form">
         <h1>¡INSCRÍBETE AL PROGRAMA!</h1>
         <p>Esta información es clave para identificar si existen beneficios diseñados para ti.</p>
-        <form action="http://127.0.0.1:3000/program/porgram-enrollment2.html">
-          <div class="terms">
-            <input type="checkbox" id="terms" name="terms">
-            <label id="confirmacion-inscribete" for="terms">Confirmo que he leído y acepto los términos y condiciones marcando la siguiente casilla.</label>
-          </div>
-      
-          <input type="text" id="icfes" name="icfes" placeholder="Código ICFES 11">
-          <input type="text" id="militaryId" name="militaryId" placeholder="Libreta Militar">
+        <form action="http://127.0.0.1:3000/program/index-cuenta.html">         
+          
+          <label for="estrato"></label>
+          <select id="estrato name="previousLevel">
+            <option value="">Estrato</option>
+            <!-- Opciones adicionales aquí -->
+          </select>
+
+          <label for="previousLevel"></label>
+          <select id="previousLevel" name="previousLevel">
+            <option value="">Grupo de Sisbén</option>
+            <!-- Opciones adicionales aquí -->
+          </select>          
           
           <label for="previousLevel"></label>
           <select id="previousLevel" name="previousLevel">
-            <option value="">Seleccionar nivel de formación previo</option>
+            <option value="">EPS</option>
             <!-- Opciones adicionales aquí -->
           </select>
       
@@ -57,48 +62,48 @@
             <div class="documents-upload">           
 
               <div class="document-item">
-                <label for="upload-cedula" class="custom-file-upload">Copia de cédula</label>
-                <label for="upload-cedula" class="icons">
+                <label for="upload-Recibo" class="custom-file-upload">Recibo de tu casa</label>
+                <label for="upload-Recibo" class="icons">
                   <i class="fa fa-plus-circle add-button"></i>
                   <i class="fa fa-question-circle info-button" onclick="alert('Cargue una copia escaneada de su identificación. Los formatos aceptados son JPG, PNG y PDF.')"></i>
                 </label>
-                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+                <input id="upload-Recibo" type="file" class="file-input" style="display:none;"/>
               </div>
               
               <div class="document-item">
-                <label for="upload-cedula" class="custom-file-upload">copia de libreta militar</label>
-                <label for="upload-cedula" class="icons">
+                <label for="upload-adress" class="custom-file-upload">Certificado ADRESS</label>
+                <label for="upload-adress" class="icons">
                   <i class="fa fa-plus-circle add-button"></i>
                   <i class="fa fa-question-circle info-button" onclick="alert('Cargue una copia escaneada de su identificación. Los formatos aceptados son JPG, PNG y PDF.')"></i>
                 </label>
-                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+                <input id="upload-adress" type="file" class="file-input" style="display:none;"/>
               </div>
               
               <div class="document-item">
-                <label for="upload-cedula" class="custom-file-upload">Copia acta de grado</label>
-                <label for="upload-cedula" class="icons">
+                <label for="upload-Sisben" class="custom-file-upload">Certificado Sisbén</label>
+                <label for="upload-Sisben" class="icons">
                   <i class="fa fa-plus-circle add-button"></i>
                   <i class="fa fa-question-circle info-button" onclick="alert('Cargue una copia escaneada de su identificación. Los formatos aceptados son JPG, PNG y PDF.')"></i>
                 </label>
-                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+                <input id="upload-Sisben" type="file" class="file-input" style="display:none;"/>
               </div>
               
               <div class="document-item">
-                <label for="upload-cedula" class="custom-file-upload">Copia diplima de grado</label>
-                <label for="upload-cedula" class="icons">
+                <label for="upload-electoral" class="custom-file-upload">Certificado Electoral</label>
+                <label for="upload-electoral" class="icons">
                   <i class="fa fa-plus-circle add-button"></i>
                   <i class="fa fa-question-circle info-button" onclick="alert('Cargue una copia escaneada de su identificación. Los formatos aceptados son JPG, PNG y PDF.')"></i>
                 </label>
-                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+                <input id="upload-electoral" type="file" class="file-input" style="display:none;"/>
               </div>
 
               <div class="document-item">
-                <label for="upload-cedula" class="custom-file-upload">Certificado de ICFES</label>
-                <label for="upload-cedula" class="icons">
+                <label for="upload-foto" class="custom-file-upload">Foto para doc. f. Blanco</label>
+                <label for="upload-foto" class="icons">
                   <i class="fa fa-plus-circle add-button"></i>
                   <i class="fa fa-question-circle info-button" onclick="alert('Cargue una copia escaneada de su identificación. Los formatos aceptados son JPG, PNG y PDF.')"></i>
                 </label>
-                <input id="upload-cedula" type="file" class="file-input" style="display:none;"/>
+                <input id="upload-foto" type="file" class="file-input" style="display:none;"/>
               </div>
               
               
@@ -106,8 +111,8 @@
           </div>           
                 
           <div class="form-buttons">
-            <button type="button" class="back-button" onclick="location.href='http://127.0.0.1:3000/program/porgram-enrollment.html';">Regresar</button>
-            <button type="submit" class="next-button">Siguiente</button>
+            <button type="button" class="back-button" onclick="location.href='http://127.0.0.1:3000/program/porgram-enrollment1.html';">Regresar</button>
+            <button type="submit" class="next-button" onclick="location.href='http://127.0.0.1:3000/program/index-cuenta.html';">Siguiente</button>
           </div>
         </form>
       </div>

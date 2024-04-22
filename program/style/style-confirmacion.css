@@ -1,0 +1,48 @@
+.confirmation-container {
+  width: 350px; /* Adjust width as necessary */
+  margin: 50px auto; /* Centers the div */
+  padding: 30px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  border-radius: 15px;
+  position: relative;
+  font-size: 16px;
+}
+
+.confirmation-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.confirmation-container p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.confirmation-container button {
+  padding: 15px 40px;
+  margin-bottom: 20px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirmation-container button:hover {
+  background-color: var(--featured-color);
+}
+
+.footer {
+  position: absolute;
+  bottom: -25px; /* Adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background-color);
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.5em;
+}
